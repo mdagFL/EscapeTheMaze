@@ -2,19 +2,6 @@
 <HTML lang="en">
 	<Head>
 	<Title>"Escape the Maze!"</TITLE>
-		
-		<!-- 
-		GLSL is the language used for shaders (GL Shader Language)
-		
-		Attribute - you specify how to pull the data out of the buffers you supply.
-		Buffers - Data loaded onto the GPU (Normally vertex information)
-		
-		Uniforms - global variables (in GLSL) that you set before you run the shader program
-		
-		Textures - Textures are arrays of data you can randomly acces in your shader program.  
-		
-		Varying - are way for a vertex shader to pass data to the fragmentShader.
-		-->
 		<script id="2dVertexShader" type="notjs">
 		attribute vec3 a_position;
 		attribute vec2 a_texcoord;
@@ -349,7 +336,7 @@
 		}
 		</script>
 		<script src="webgl_interface.js"></script>
-		<script src="BasicGameObjectNoFill.js"></script>
+		<script src="GameObject.js"></script>
 
 		<script>
         function createCheckered()
@@ -724,16 +711,22 @@
 	</Head>
 	<BODY style="padding: 15px;">
 		<HEADER>
-            <h2>
+            <H2>
                 Escape the Maze!
-            </h2>
+            </H2>
 		</HEADER>
 		Move with WASD, fire with spacebar
         <br/>
 		<CANVAS id="myCanvas" width="1280" height="800" style = "border: 1px solid #000;">
 			Your browser does not support canvas.
 		</CANVAS>
-        <div id="health">HP: 5</div>
+         <H2>
+        <div id="health">
+          <H1>
+            HP: 5
+          </H1>  
+        </div>
+        </H2>
 		<h1 id="youWin"></h1>
 		<SCRIPT>
 			var canvas = document.getElementById("myCanvas");
